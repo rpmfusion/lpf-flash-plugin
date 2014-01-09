@@ -6,7 +6,7 @@
 
 Name:           lpf-flash-plugin
 Version:        11.2.202.332
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
 
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Thu Jan 09 2014 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.332-2
+- Bump release to add missing README in CVS.
+
 * Mon Dec 16 2013 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.332-1
 - Updated to 11.2.202.332.
 
