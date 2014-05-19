@@ -2,8 +2,8 @@
 %global	        __strip /bin/true
 
 Name:           flash-plugin
-Version:        11.2.202.356
-Release:        1%{?dist}
+Version:        11.2.202.359
+Release:        0%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
 License:        Non-redistributable, no modification permitted
