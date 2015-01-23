@@ -5,7 +5,7 @@
 %define         target_pkg %(t=%{name}; echo ${t#lpf-})
 
 Name:           lpf-flash-plugin
-Version:        11.2.202.425
+Version:        11.2.202.438
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Fri Jan 23 2015 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.438-1
+- Update to 11.2.202.438.
+
 * Sun Dec 14 2014 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.425-1
 - Update to 11.2.202.425.
 
