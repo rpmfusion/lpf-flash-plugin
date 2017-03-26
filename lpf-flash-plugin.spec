@@ -6,7 +6,7 @@
 
 Name:           lpf-flash-plugin
 Version:        11.2.202.626
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
 
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Sun Mar 26 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 1:11.2.202.626-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Fri Jul 08 2016 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.626-1
 - Update to latest 11.2.202.626.
 
