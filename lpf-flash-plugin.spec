@@ -5,8 +5,8 @@
 %define         target_pkg %(t=%{name}; echo ${t#lpf-})
 
 Name:           lpf-flash-plugin
-Version:        11.2.202.626
-Release:        3%{?dist}
+Version:        27.0.0.130
+Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
 
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Mon Sep 18 2017 Sérgio Basto <sergio@serjux.com> - 1:27.0.0.130-1
+- Update to flash_player_ppapi 27.0.0.130
+
 * Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 1:11.2.202.626-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 
