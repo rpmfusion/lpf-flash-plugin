@@ -39,13 +39,13 @@ created on the Adobe Flash platform.
 # Nothing to build
 
 %install
-mkdir -p %{buildroot}%{_libdir}/mozilla/plugins/
+mkdir -p %{buildroot}%{_libdir}/flash-plugin/
 install -p -m 0755 libpepflashplayer.so manifest.json \
-    -D %{buildroot}%{_libdir}/mozilla/plugins/
+    -D %{buildroot}%{_libdir}/flash-plugin/
 
 %files
 %doc readme.txt license.pdf LGPL
-%{_libdir}/mozilla/plugins/*
+%{_libdir}/flash-plugin/
 
 %changelog
 * Mon Sep 18 2017 Sérgio Basto <sergio@serjux.com> - 1:27.0.0.130-1
