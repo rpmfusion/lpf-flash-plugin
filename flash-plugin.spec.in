@@ -2,7 +2,7 @@
 %global	        __strip /bin/true
 
 Name:           flash-plugin
-Version:        11.2.202.626
+Version:        27.0.0.183
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
@@ -10,8 +10,8 @@ License:        Non-redistributable, no modification permitted
 URL:            http://get.adobe.com/flashplayer/
 ExclusiveArch:  %{ix86} x86_64
 
-Source0:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/install_flash_player_11_linux.i386.tar.gz
-Source1:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/install_flash_player_11_linux.x86_64.tar.gz
+Source0:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.i386.tar.gz
+Source1:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.x86_64.tar.gz
 
 BuildRequires:  desktop-file-utils
 Requires:       mozilla-filesystem
@@ -77,6 +77,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Tue Nov 07 2017 Sérgio Basto <sergio@serjux.com> - 1:27.0.0.183-1
+- Update to 27 in same way
+
 * Tue Jun 21 2016 Simone Caronni <negativo17@gmail.com> - 1:11.2.202.626-1
 - Update to latest 11.2.202.626.
 
