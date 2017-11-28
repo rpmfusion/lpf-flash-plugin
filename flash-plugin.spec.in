@@ -3,15 +3,18 @@
 
 Name:           flash-plugin
 Version:        27.0.0.187
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
 License:        Non-redistributable, no modification permitted
 URL:            http://get.adobe.com/flashplayer/
 ExclusiveArch:  %{ix86} x86_64
 
+%ifarch %{ix86}
 Source0:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.i386.tar.gz
-Source1:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.x86_64.tar.gz
+%else
+Source0:        http://fpdownload.macromedia.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.x86_64.tar.gz
+%endif
 
 BuildRequires:  desktop-file-utils
 Requires:       mozilla-filesystem
@@ -32,13 +35,8 @@ Requires:       hicolor-icon-theme
 Adobe Flash Player preferences control panel.
 
 %prep
-%ifarch %{ix86}
 %setup -q -c -n %{name}
-%endif
 
-%ifarch x86_64
-%setup -q -c -T -b 1 -n %{name}
-%endif
 
 %build
 # Nothing to build
@@ -77,6 +75,10 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/icons/hicolor/*/apps/flash-player-properties.png
 
 %changelog
+* Tue Nov 28 2017 Sérgio Basto <sergio@serjux.com> - 1:27.0.0.187-2
+- Fixup rpm setup macro that was using -b
+- Download just one source, instead download sources for all arches
+
 * Wed Nov 15 2017 Sérgio Basto <sergio@serjux.com> - 1:27.0.0.187-1
 - Update to 27.0.0.187
 
