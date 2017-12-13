@@ -5,8 +5,8 @@
 %define         target_pkg %(t=%{name}; echo ${t#lpf-})
 
 Name:           lpf-flash-plugin
-Version:        27.0.0.187
-Release:        2%{?dist}
+Version:        28.0.0.126
+Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
 
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Wed Dec 13 2017 Sérgio Basto <sergio@serjux.com> - 1:28.0.0.126-1
+- Update to 28.0.0.126
+
 * Tue Nov 28 2017 Sérgio Basto <sergio@serjux.com> - 1:27.0.0.187-2
 - Fixup rpm setup macro that was using -b
 - Download just one source, instead download sources for all arches
