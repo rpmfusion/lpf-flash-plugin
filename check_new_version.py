@@ -13,13 +13,13 @@ html = requests.get('http://get.adobe.com/flashplayer/about/')
 str_mx = re.compile('Linux.*?Firefox.*?NPAPI.*?<td>([\d.]+)<.td>', re.S)
 res = str_mx.findall(html.text)
 new_version = res[-1]
-print ("deb32 = %s" % new_version)
+print ("new_version = %s" % new_version)
 
 spec = open('flash-plugin.spec.in').read()
 str_mx3 = re.compile('Version:\s*([\d.]+)')
 res2 = str_mx3.findall(spec)
 old_version = res2[-1]
-print ("deb32 = %s" % old_version)
+print ("old_version = %s" % old_version)
 
 def runme(cmd, env, cwd='.'):
     """Simple function to run a command and return 0 for success, 1 for
