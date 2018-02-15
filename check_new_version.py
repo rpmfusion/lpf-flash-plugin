@@ -43,7 +43,7 @@ if new_version != old_version:
     if runme(pkgcmd, enviro):
         print('error running runme')
 
-    print('rfpkg clog && rfpkg commit -F clog && /bin/rm clog && git show')
+    print('rfpkg ci -c && git show')
     print('rfpkg push && rfpkg build --nowait')
     print('git checkout f27 && git merge master && git push && rfpkg build --nowait; git checkout master')
     print('git checkout f26 && git merge master && git push && rfpkg build --nowait; git checkout master')
