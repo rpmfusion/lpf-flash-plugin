@@ -5,8 +5,8 @@
 %define         target_pkg %(t=%{name}; echo ${t#lpf-})
 
 Name:           lpf-flash-plugin
-Version:        28.0.0.161
-Release:        2%{?dist}
+Version:        29.0.0.113
+Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
 
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Fri Mar 16 2018 Sérgio Basto <sergio@serjux.com> - 1:29.0.0.113-1
+- Update to 29.0.0.113
+
 * Fri Mar 02 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 1:28.0.0.161-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
