@@ -5,7 +5,7 @@
 %define         target_pkg %(t=%{name}; echo ${t#lpf-})
 
 Name:           lpf-flash-plugin
-Version:        30.0.0.113
+Version:        30.0.0.134
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
@@ -67,6 +67,9 @@ fi
 
 
 %changelog
+* Sat Jul 21 2018 Sérgio Basto <sergio@serjux.com> - 1:30.0.0.134-1
+- Update to 30.0.0.134
+
 * Tue Jun 26 2018 Sérgio Basto <sergio@serjux.com> - 1:30.0.0.113-1
 - Update to 30.0.0.113
 
