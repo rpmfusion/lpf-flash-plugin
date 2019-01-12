@@ -23,16 +23,16 @@ def runme(cmd, env, cwd='.'):
 html = requests.get('http://get.adobe.com/flashplayer/about/')
 #print (html.text)
 
-str_mx = re.compile('Linux.*?Firefox.*?NPAPI.*?<td>([\d.]+)<.td>', re.S)
-res = str_mx.findall(html.text)
-new_version = res[-1]
-print ("new_version = %s" % new_version)
-
 spec = open('flash-plugin.spec.in').read()
 str_mx3 = re.compile('Version:\s*([\d.]+)')
 res2 = str_mx3.findall(spec)
 old_version = res2[-1]
 print ("old_version = %s" % old_version)
+
+str_mx = re.compile('Linux.*?Firefox.*?NPAPI.*?<td>([\d.]+)<.td>', re.S)
+res = str_mx.findall(html.text)
+new_version = res[-1]
+print ("new_version = %s" % new_version)
 
 if new_version != old_version:
     enviro = os.environ
