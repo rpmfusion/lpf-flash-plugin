@@ -45,7 +45,7 @@ if new_version != old_version:
 
     print('rfpkg ci -c && git show')
     print('rfpkg push && rfpkg build --nowait')
-    print('git checkout f27 && git merge master && git push && rfpkg build --nowait; git checkout master')
+    print('git checkout f30 && git merge master && git push && rfpkg build --nowait; git checkout master')
     print('git checkout f29 && git merge master && git push && rfpkg build --nowait; git checkout master')
     print('git checkout f28 && git merge master && git push && rfpkg build --nowait; git checkout master')
 
