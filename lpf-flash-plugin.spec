@@ -11,7 +11,7 @@ Epoch:          1
 Summary:        Adobe Flash Player package bootstrap
 
 License:        MIT
-URL:            http://github.com/leamas/lpf
+URL:            https://github.com/leamas/lpf
 Group:          Development/Tools
 ExclusiveArch:  %{ix86} x86_64
 

@@ -7,13 +7,13 @@ Release:        1%{?dist}
 Epoch:          1
 Summary:        Adobe Flash Player
 License:        Non-redistributable, no modification permitted
-URL:            http://get.adobe.com/flashplayer/
+URL:            https://get.adobe.com/flashplayer/
 ExclusiveArch:  %{ix86} x86_64
 
 %ifarch %{ix86}
-Source0:        http://fpdownload.adobe.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.i386.tar.gz
+Source0:        https://fpdownload.adobe.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.i386.tar.gz
 %else
-Source0:        http://fpdownload.adobe.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.x86_64.tar.gz
+Source0:        https://fpdownload.adobe.com/get/flashplayer/pdc/%{version}/flash_player_npapi_linux.x86_64.tar.gz
 %endif
 
 BuildRequires:  desktop-file-utils
