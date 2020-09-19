@@ -20,6 +20,14 @@ def runme(cmd, env, cwd='.'):
         return 1
     return 0
 
+enviro = os.environ
+pkgcmd = ['git', 'checkout', 'master']
+if runme(pkgcmd, enviro):
+    print('error running runme')
+pkgcmd = ['git', 'pull'] # 2>/dev/null
+if runme(pkgcmd, enviro):
+    print('error running runme')
+
 html = requests.get('http://get.adobe.com/flashplayer/about/')
 #print (html.text)
 
@@ -35,7 +43,6 @@ new_version = res[-1]
 print ("new_version = %s" % new_version)
 
 if new_version != old_version:
-    enviro = os.environ
     pkgcmd = ['rpmdev-bumpspec', '-n', new_version, '-c', 'Update to %s' % (new_version), 'flash-plugin.spec.in']
     if runme(pkgcmd, enviro):
         print('error running runme')
